@@ -1,0 +1,89 @@
+*{
+    /* Account for all the box model items. e.g padding. margin. border*/
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+}
+header{
+    padding:50px;
+    text-align: center;
+    background-color: darkolivegreen;
+    color:white;
+}
+.main-menu
+{    
+    background-color: cadetblue;        
+}
+
+.row
+{    
+    display: flex;
+    flex-wrap: wrap;
+}
+aside{
+    flex:20%;
+    background-color:darkcyan;
+}
+.main{
+    flex:80%;
+    background-color:#fff;
+    padding:20px;
+}
+img{
+    width:100%;    
+}
+footer{
+    padding:10px;
+    text-align: center;
+    background-color: darkslategray;
+    color:#fefefe;
+}
+
+/*========================
+    Dropdown Menu
+==========================*/
+.main-menu{
+    position: relative;
+    padding:10px;
+    
+}
+.btnShop{
+    background-color:lightslategray;
+    color:#fff;
+    padding:10px; 
+    text-decoration: none;   
+    text-transform: uppercase;
+}
+.shop-menu{
+    display: none;
+    background-color:#fff;
+    min-width:150px;
+    z-index: 1;
+    position: absolute;
+    top:35px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.089);
+}
+.shop-menu a{
+    color:#000;
+    padding:10px 15px;
+    text-decoration: none;
+    display:block;
+}
+.shop-menu a:hover{
+    background-color:orange;
+}
+.main-menu:hover .shop-menu{
+    display:block;
+}
+
+/*========================
+    Responsive Layout
+==========================*/
+@media screen and (max-width: 700px) {
+    .row, .main-menu{
+        flex-direction: column;
+    }
+}
